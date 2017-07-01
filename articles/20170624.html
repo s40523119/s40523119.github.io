@@ -97,7 +97,7 @@
 <meta name="keywords" content="心情札記">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搬離大學宿舍">
-<meta property="og:url" content="https://s40523119.github.io/20170624.html">
+<meta property="og:url" content="https://s40523119.github.io/articles/20170624.html">
 <meta property="og:site_name" content="林建安 Lin, Jian-an">
 <meta property="og:description" content="日子很快，這張照片是去年10月在宿舍拍的，我吉他彈了快六年，曾在西門町街頭、咖啡廳表演過，也參加過吉他比賽，雖然不是很頂尖，但對於吉他新手來說，我可以是個好老師呢！到後來，大家也都只是三分鐘熱度，沒人陪我彈啦! 離鄉背井來虎尾念書，大多學生也都是外地人，所以第一年住宿都會選擇 學校宿舍，男生宿舍比較克難一點，一間寢室住5個人，共用樓層大衛浴間。當初，一開始就很想住在外面，但是似乎又得在宿舍混一下">
 <meta property="og:image" content="http://i.imgur.com/MN55PEj.jpg">
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://s40523119.github.io/20170624.html"/>
+  <link rel="canonical" href="https://s40523119.github.io/articles/20170624.html"/>
 
 
 
@@ -300,7 +300,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170624.html">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/articles/20170624.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -370,9 +370,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/20170624.html#comments" itemprop="discussionUrl">
+                <a href="/articles/20170624.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="20170624.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="articles/20170624.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -446,7 +446,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/20170622.html" rel="next" title="網誌開張大吉">
+              <a href="/articles/20170622.html" rel="next" title="網誌開張大吉">
                 <i class="fa fa-chevron-left"></i> 網誌開張大吉
               </a>
             
@@ -456,7 +456,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/20170630.html" rel="prev" title="Django專案(1)-建立">
+              <a href="/articles/20170630.html" rel="prev" title="Django專案(1)-建立">
                 Django專案(1)-建立 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -638,118 +638,129 @@
   <div class="bg_content">
         <canvas id="canvas"></canvas>
    </div>
-  'use strict';
-     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-     function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-     function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-     var Circle = function () {
-        function Circle(x, y) {
-             _classCallCheck(this, Circle);
-             this.x = x;
-             this.y = y;
-             this.r = Math.random() * 10;
-             this._mx = Math.random();
-             this._my = Math.random();
-         }
-        _createClass(Circle, [{
-             key: 'drawCircle',
-             value: function drawCircle(ctx) {
-                 ctx.beginPath();
-                 //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
-                 ctx.arc(this.x, this.y, this.r, 0, 360);
-                 ctx.closePath();
-                 ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
-                 ctx.fill();
-             }
-         }, {
-             key: 'drawLine',
-             value: function drawLine(ctx, _circle) {
-                 var dx = this.x - _circle.x;
-                 var dy = this.y - _circle.y;
-                 var d = Math.sqrt(dx * dx + dy * dy);
-                 if (d < 150) {
-                     ctx.beginPath();
-                     ctx.moveTo(this.x, this.y); //起始点
-                     ctx.lineTo(_circle.x, _circle.y); //终点
-                     ctx.closePath();
-                     ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
-                     ctx.stroke();
-                 }
-             }
-         }, {
-             key: 'move',
-             value: function move(w, h) {
-                 this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
-                 this._my = this.y < h && this.y > 0 ? this._my : -this._my;
-                 this.x += this._mx / 2;
-                 this.y += this._my / 2;
-             }
-         }]);
-         return Circle;
-     }();
-     var currentCirle = function (_Circle) {
-         _inherits(currentCirle, _Circle);
-         function currentCirle(x, y) {
-             _classCallCheck(this, currentCirle);
-             return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
-         }
-         _createClass(currentCirle, [{
-             key: 'drawCircle',
-             value: function drawCircle(ctx) {
-                 ctx.beginPath();
-                 //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
-                 this.r = 8;
-                 ctx.arc(this.x, this.y, this.r, 0, 360);
-                 ctx.closePath();
-                 //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-                 ctx.fillStyle = 'rgba(255, 77, 54, 0.6)';
-                 ctx.fill();
-             }
-         }]);
-         return currentCirle;
-     }(Circle);
-     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-     var canvas = document.getElementById('canvas');
-     var ctx = canvas.getContext('2d');
-     var w = canvas.width = canvas.offsetWidth;
-     var h = canvas.height = canvas.offsetHeight;
-     var circles = [];
-     var current_circle = new currentCirle(0, 0);
-     var draw = function draw() {
-         ctx.clearRect(0, 0, w, h);
-         for (var i = 0; i < circles.length; i++) {
-             circles[i].move(w, h);
-             circles[i].drawCircle(ctx);
-             for (j = i + 1; j < circles.length; j++) {
-                 circles[i].drawLine(ctx, circles[j]);
-             }
-         }
-         if (current_circle.x) {
-             current_circle.drawCircle(ctx);
-             for (var k = 1; k < circles.length; k++) {
-                 current_circle.drawLine(ctx, circles[k]);
-             }
-         }
-         requestAnimationFrame(draw);
-     };
-     var init = function init(num) {
-         for (var i = 0; i < num; i++) {
-             circles.push(new Circle(Math.random() * w, Math.random() * h));
-         }
-         draw();
-     };
-     window.addEventListener('load', init(60));
-     window.onmousemove = function (e) {
-         e = e || window.event;
-         current_circle.x = e.clientX;
-         current_circle.y = e.clientY;
-     };
-     window.onmouseout = function () {
-         current_circle.x = null;
-         current_circle.y = null;
-     };
+
   
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
+
+<script type="text/javascript">
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Circle = function () {
+   function Circle(x, y) {
+        _classCallCheck(this, Circle);
+        this.x = x;
+        this.y = y;
+        this.r = Math.random() * 10;
+        this._mx = Math.random();
+        this._my = Math.random();
+    }
+   _createClass(Circle, [{
+        key: 'drawCircle',
+        value: function drawCircle(ctx) {
+            ctx.beginPath();
+            //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
+            ctx.arc(this.x, this.y, this.r, 0, 360);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+            ctx.fill();
+        }
+    }, {
+        key: 'drawLine',
+        value: function drawLine(ctx, _circle) {
+            var dx = this.x - _circle.x;
+            var dy = this.y - _circle.y;
+            var d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 150) {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y); //起始点
+                ctx.lineTo(_circle.x, _circle.y); //终点
+                ctx.closePath();
+                ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+                ctx.stroke();
+            }
+        }
+    }, {
+        key: 'move',
+        value: function move(w, h) {
+            this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
+            this._my = this.y < h && this.y > 0 ? this._my : -this._my;
+            this.x += this._mx / 2;
+            this.y += this._my / 2;
+        }
+    }]);
+    return Circle;
+}();
+var currentCirle = function (_Circle) {
+    _inherits(currentCirle, _Circle);
+    function currentCirle(x, y) {
+        _classCallCheck(this, currentCirle);
+        return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
+    }
+    _createClass(currentCirle, [{
+        key: 'drawCircle',
+        value: function drawCircle(ctx) {
+            ctx.beginPath();
+            //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+            this.r = 8;
+            ctx.arc(this.x, this.y, this.r, 0, 360);
+            ctx.closePath();
+            //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+            ctx.fillStyle = 'rgba(255, 77, 54, 0.6)';
+            ctx.fill();
+        }
+    }]);
+    return currentCirle;
+}(Circle);
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var w = canvas.width = canvas.offsetWidth;
+var h = canvas.height = canvas.offsetHeight;
+var circles = [];
+var current_circle = new currentCirle(0, 0);
+var draw = function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < circles.length; i++) {
+        circles[i].move(w, h);
+        circles[i].drawCircle(ctx);
+        for (j = i + 1; j < circles.length; j++) {
+            circles[i].drawLine(ctx, circles[j]);
+        }
+    }
+    if (current_circle.x) {
+        current_circle.drawCircle(ctx);
+        for (var k = 1; k < circles.length; k++) {
+            current_circle.drawLine(ctx, circles[k]);
+        }
+    }
+    requestAnimationFrame(draw);
+};
+var init = function init(num) {
+    for (var i = 0; i < num; i++) {
+        circles.push(new Circle(Math.random() * w, Math.random() * h));
+    }
+    draw();
+};
+window.addEventListener('load', init(60));
+window.onmousemove = function (e) {
+    e = e || window.event;
+    current_circle.x = e.clientX;
+    current_circle.y = e.clientY;
+};
+window.onmouseout = function () {
+    current_circle.x = null;
+    current_circle.y = null;
+};
+
+</script>
+
+
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -802,7 +813,7 @@
   <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
@@ -811,8 +822,8 @@
 
 
 
-  
-  
+
+
 
 
   <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
@@ -821,20 +832,20 @@
 
 
 
-  
+
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
 
 
-  
+
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
-  
+
 
 
   
@@ -846,8 +857,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://s40523119.github.io/20170624.html';
-          this.page.identifier = '20170624.html';
+          this.page.url = 'https://s40523119.github.io/articles/20170624.html';
+          this.page.identifier = 'articles/20170624.html';
           this.page.title = '搬離大學宿舍';
         };
         var d = document, s = d.createElement('script');
@@ -883,28 +894,21 @@
 
 
 
-  
 
 
 
 
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 
-  
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-  
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
