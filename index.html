@@ -295,7 +295,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/2017/06/30/20170630/">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170701.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -314,7 +314,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/30/20170630/" itemprop="url">Django專案(1)-建立</a></h2>
+                <a class="post-title-link" href="/20170701.html" itemprop="url">Django專案(2)-視圖與URL</a></h2>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-06-30T21:44:09+08:00">
-                2017-06-30
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-07-01T23:21:10+08:00">
+                2017-07-01
               </time>
             
 
@@ -349,8 +349,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/source/categories/Pyhton/" itemprop="url" rel="index">
-                    <span itemprop="name">Pyhton</span>
+                  <a href="/source/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/Python/Django教學/" itemprop="url" rel="index">
+                    <span itemprop="name">Django教學</span>
                   </a>
                 </span>
 
@@ -367,9 +378,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/30/20170630/#comments" itemprop="discussionUrl">
+                <a href="/20170701.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/30/20170630/" itemprop="commentCount"></span>
+                        data-disqus-identifier="20170701.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -396,11 +407,17 @@
       
         
           <p><img src="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg" alt="Django"></p>
-<p>前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!</p>
-<h2 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a>建立虛擬環境</h2><p>使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?</p>
+<h2 id="什麼是MVC"><a href="#什麼是MVC" class="headerlink" title="什麼是MVC?"></a>什麼是MVC?</h2><blockquote><p>MVC模式就是架構模式的一種，MVC模式的目的是實作一種動態的程式設計，使後續對程式的修改和擴充功能簡化，並且使程式某一部分的重複利用成為可能。除此之外，此模式通過對複雜度的簡化，使程式結構更加直覺。</p>
+<p>軟體系統通過對自身基本部分分離的同時也賦予了各個基本部分應有的功能。專業人員可以通過自身的專長分組：</p>
+<ul>
+<li>控制器 Controller - 負責轉發請求，對請求進行處理。</li>
+<li>視圖 View - 介面設計人員進行圖形介面設計。</li>
+<li>模型 Model - 程式設計師編寫程式應有的功能（實作演算法等等）、資料庫專家進行資料管理和資料庫設計（可以實作具體的功能）。</li>
+</ul>
+<footer><strong>Mr. Opengate</strong><cite><a href="http://mropengate.blogspot.tw/2015/08/mvcdjangomtv.html" target="_blank" rel="external">MVC架構模式、Django的MTV模式 介紹與比較</a></cite></footer></blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/30/20170630/#more" rel="contents">
+            <a class="btn" href="/20170701.html#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -446,7 +463,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/2017/06/24/20170624/">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170630.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -465,7 +482,169 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/24/20170624/" itemprop="url">搬離大學宿舍</a></h2>
+                <a class="post-title-link" href="/20170630.html" itemprop="url">Django專案(1)-建立</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-06-30T21:44:09+08:00">
+                2017-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/Python/Django教學/" itemprop="url" rel="index">
+                    <span itemprop="name">Django教學</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/20170630.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="20170630.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg" alt="Django"></p>
+<p>前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉!</p>
+<h2 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a>建立虛擬環境</h2><p>使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20170630.html#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170624.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="林建安">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林建安 Lin, Jian-an">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/20170624.html" itemprop="url">搬離大學宿舍</a></h2>
         
 
         <div class="post-meta">
@@ -518,9 +697,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/24/20170624/#comments" itemprop="discussionUrl">
+                <a href="/20170624.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/24/20170624/" itemprop="commentCount"></span>
+                        data-disqus-identifier="20170624.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -551,7 +730,7 @@
 <p>離鄉背井來虎尾念書，大多學生也都是外地人，所以第一年住宿都會選擇 <strong>學校宿舍</strong>，男生宿舍比較克難一點，一間寢室住5個人，共用樓層大衛浴間。當初，一開始就很想住在外面，但是似乎又得在宿舍混一下，跟大家熟識才行阿!不然，一開始就住在外面，就會比較難跟大家互動，會不會變<em>邊緣人</em>呢？！所以最後還是住宿舍啦！</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/24/20170624/#more" rel="contents">
+            <a class="btn" href="/20170624.html#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -597,7 +776,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/2017/06/22/20170622/">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170622.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -616,7 +795,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/22/20170622/" itemprop="url">網誌開張大吉</a></h2>
+                <a class="post-title-link" href="/20170622.html" itemprop="url">網誌開張大吉</a></h2>
         
 
         <div class="post-meta">
@@ -669,9 +848,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/22/20170622/#comments" itemprop="discussionUrl">
+                <a href="/20170622.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/22/20170622/" itemprop="commentCount"></span>
+                        data-disqus-identifier="20170622.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -701,7 +880,7 @@
 <p>最一開始用github page做靜態網站，當時是用老師自己開發的網誌剪報系統模板，主要是用<code>leo editor</code>來做編輯，形式是<code>markdown</code>，也算是蠻方便的，不過樣式自己不太喜歡，後來自己開始學了<code>HTML</code>、<code>CSS</code>、<code>Javascript</code>，就開始使用網路上提供的各式樣板，git clone 下來，自行修改編輯。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/06/22/20170622/#more" rel="contents">
+            <a class="btn" href="/20170622.html#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -783,7 +962,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
@@ -794,7 +973,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分類</span>
               </a>
             </div>
@@ -805,7 +984,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>
@@ -890,7 +1069,120 @@
     
 
   </div>
-
+  <div class="bg_content">
+        <canvas id="canvas"></canvas>
+   </div>
+  'use strict';
+     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+     function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+     function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+     var Circle = function () {
+        function Circle(x, y) {
+             _classCallCheck(this, Circle);
+             this.x = x;
+             this.y = y;
+             this.r = Math.random() * 10;
+             this._mx = Math.random();
+             this._my = Math.random();
+         }
+        _createClass(Circle, [{
+             key: 'drawCircle',
+             value: function drawCircle(ctx) {
+                 ctx.beginPath();
+                 //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
+                 ctx.arc(this.x, this.y, this.r, 0, 360);
+                 ctx.closePath();
+                 ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+                 ctx.fill();
+             }
+         }, {
+             key: 'drawLine',
+             value: function drawLine(ctx, _circle) {
+                 var dx = this.x - _circle.x;
+                 var dy = this.y - _circle.y;
+                 var d = Math.sqrt(dx * dx + dy * dy);
+                 if (d < 150) {
+                     ctx.beginPath();
+                     ctx.moveTo(this.x, this.y); //起始点
+                     ctx.lineTo(_circle.x, _circle.y); //终点
+                     ctx.closePath();
+                     ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+                     ctx.stroke();
+                 }
+             }
+         }, {
+             key: 'move',
+             value: function move(w, h) {
+                 this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
+                 this._my = this.y < h && this.y > 0 ? this._my : -this._my;
+                 this.x += this._mx / 2;
+                 this.y += this._my / 2;
+             }
+         }]);
+         return Circle;
+     }();
+     var currentCirle = function (_Circle) {
+         _inherits(currentCirle, _Circle);
+         function currentCirle(x, y) {
+             _classCallCheck(this, currentCirle);
+             return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
+         }
+         _createClass(currentCirle, [{
+             key: 'drawCircle',
+             value: function drawCircle(ctx) {
+                 ctx.beginPath();
+                 //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+                 this.r = 8;
+                 ctx.arc(this.x, this.y, this.r, 0, 360);
+                 ctx.closePath();
+                 //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+                 ctx.fillStyle = 'rgba(255, 77, 54, 0.6)';
+                 ctx.fill();
+             }
+         }]);
+         return currentCirle;
+     }(Circle);
+     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+     var canvas = document.getElementById('canvas');
+     var ctx = canvas.getContext('2d');
+     var w = canvas.width = canvas.offsetWidth;
+     var h = canvas.height = canvas.offsetHeight;
+     var circles = [];
+     var current_circle = new currentCirle(0, 0);
+     var draw = function draw() {
+         ctx.clearRect(0, 0, w, h);
+         for (var i = 0; i < circles.length; i++) {
+             circles[i].move(w, h);
+             circles[i].drawCircle(ctx);
+             for (j = i + 1; j < circles.length; j++) {
+                 circles[i].drawLine(ctx, circles[j]);
+             }
+         }
+         if (current_circle.x) {
+             current_circle.drawCircle(ctx);
+             for (var k = 1; k < circles.length; k++) {
+                 current_circle.drawLine(ctx, circles[k]);
+             }
+         }
+         requestAnimationFrame(draw);
+     };
+     var init = function init(num) {
+         for (var i = 0; i < num; i++) {
+             circles.push(new Circle(Math.random() * w, Math.random() * h));
+         }
+         draw();
+     };
+     window.addEventListener('load', init(60));
+     window.onmousemove = function (e) {
+         e = e || window.event;
+         current_circle.x = e.clientX;
+         current_circle.y = e.clientY;
+     };
+     window.onmouseout = function () {
+         current_circle.x = null;
+         current_circle.y = null;
+     };
   
 
 <script type="text/javascript">
@@ -909,6 +1201,8 @@
 
   
 
+
+  
 
 
 
@@ -937,6 +1231,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -1024,6 +1321,11 @@
 
   
 
+  
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
   
 
 </body>

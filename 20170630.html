@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!! 建立虛擬環境使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?">
+<meta name="description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
 <meta name="keywords" content="python,Django,web-framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django專案(1)-建立">
-<meta property="og:url" content="https://s40523119.github.io/2017/06/30/20170630/index.html">
+<meta property="og:url" content="https://s40523119.github.io/20170630.html">
 <meta property="og:site_name" content="林建安 Lin, Jian-an">
-<meta property="og:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!! 建立虛擬環境使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?">
+<meta property="og:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
 <meta property="og:image" content="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg">
-<meta property="og:updated_time" content="2017-06-30T16:00:55.891Z">
+<meta property="og:updated_time" content="2017-07-01T16:27:54.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django專案(1)-建立">
-<meta name="twitter:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!! 建立虛擬環境使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?">
+<meta name="twitter:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
 <meta name="twitter:image" content="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="https://s40523119.github.io/2017/06/30/20170630/"/>
+  <link rel="canonical" href="https://s40523119.github.io/20170630.html"/>
 
 
 
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/2017/06/30/20170630/">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/20170630.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -349,8 +349,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/source/categories/Pyhton/" itemprop="url" rel="index">
-                    <span itemprop="name">Pyhton</span>
+                  <a href="/source/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/source/categories/Python/Django教學/" itemprop="url" rel="index">
+                    <span itemprop="name">Django教學</span>
                   </a>
                 </span>
 
@@ -367,9 +378,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/30/20170630/#comments" itemprop="discussionUrl">
+                <a href="/20170630.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/30/20170630/" itemprop="commentCount"></span>
+                        data-disqus-identifier="20170630.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -395,7 +406,7 @@
 
       
         <p><img src="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg" alt="Django"></p>
-<p>前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!</p>
+<p>前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉!</p>
 <h2 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a>建立虛擬環境</h2><p>使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?</p>
 <a id="more"></a>
 <p>P.S.本電腦環境使用Ubuntu1604,Python3,pip3</p>
@@ -457,7 +468,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/24/20170624/" rel="next" title="搬離大學宿舍">
+              <a href="/20170624.html" rel="next" title="搬離大學宿舍">
                 <i class="fa fa-chevron-left"></i> 搬離大學宿舍
               </a>
             
@@ -466,6 +477,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/20170701.html" rel="prev" title="Django專案(2)-視圖與URL">
+                Django專案(2)-視圖與URL <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -544,7 +559,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
@@ -555,7 +570,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分類</span>
               </a>
             </div>
@@ -566,7 +581,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>
@@ -667,7 +682,120 @@
     
 
   </div>
-
+  <div class="bg_content">
+        <canvas id="canvas"></canvas>
+   </div>
+  'use strict';
+     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+     function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+     function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+     var Circle = function () {
+        function Circle(x, y) {
+             _classCallCheck(this, Circle);
+             this.x = x;
+             this.y = y;
+             this.r = Math.random() * 10;
+             this._mx = Math.random();
+             this._my = Math.random();
+         }
+        _createClass(Circle, [{
+             key: 'drawCircle',
+             value: function drawCircle(ctx) {
+                 ctx.beginPath();
+                 //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
+                 ctx.arc(this.x, this.y, this.r, 0, 360);
+                 ctx.closePath();
+                 ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+                 ctx.fill();
+             }
+         }, {
+             key: 'drawLine',
+             value: function drawLine(ctx, _circle) {
+                 var dx = this.x - _circle.x;
+                 var dy = this.y - _circle.y;
+                 var d = Math.sqrt(dx * dx + dy * dy);
+                 if (d < 150) {
+                     ctx.beginPath();
+                     ctx.moveTo(this.x, this.y); //起始点
+                     ctx.lineTo(_circle.x, _circle.y); //终点
+                     ctx.closePath();
+                     ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+                     ctx.stroke();
+                 }
+             }
+         }, {
+             key: 'move',
+             value: function move(w, h) {
+                 this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
+                 this._my = this.y < h && this.y > 0 ? this._my : -this._my;
+                 this.x += this._mx / 2;
+                 this.y += this._my / 2;
+             }
+         }]);
+         return Circle;
+     }();
+     var currentCirle = function (_Circle) {
+         _inherits(currentCirle, _Circle);
+         function currentCirle(x, y) {
+             _classCallCheck(this, currentCirle);
+             return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
+         }
+         _createClass(currentCirle, [{
+             key: 'drawCircle',
+             value: function drawCircle(ctx) {
+                 ctx.beginPath();
+                 //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+                 this.r = 8;
+                 ctx.arc(this.x, this.y, this.r, 0, 360);
+                 ctx.closePath();
+                 //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+                 ctx.fillStyle = 'rgba(255, 77, 54, 0.6)';
+                 ctx.fill();
+             }
+         }]);
+         return currentCirle;
+     }(Circle);
+     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+     var canvas = document.getElementById('canvas');
+     var ctx = canvas.getContext('2d');
+     var w = canvas.width = canvas.offsetWidth;
+     var h = canvas.height = canvas.offsetHeight;
+     var circles = [];
+     var current_circle = new currentCirle(0, 0);
+     var draw = function draw() {
+         ctx.clearRect(0, 0, w, h);
+         for (var i = 0; i < circles.length; i++) {
+             circles[i].move(w, h);
+             circles[i].drawCircle(ctx);
+             for (j = i + 1; j < circles.length; j++) {
+                 circles[i].drawLine(ctx, circles[j]);
+             }
+         }
+         if (current_circle.x) {
+             current_circle.drawCircle(ctx);
+             for (var k = 1; k < circles.length; k++) {
+                 current_circle.drawLine(ctx, circles[k]);
+             }
+         }
+         requestAnimationFrame(draw);
+     };
+     var init = function init(num) {
+         for (var i = 0; i < num; i++) {
+             circles.push(new Circle(Math.random() * w, Math.random() * h));
+         }
+         draw();
+     };
+     window.addEventListener('load', init(60));
+     window.onmousemove = function (e) {
+         e = e || window.event;
+         current_circle.x = e.clientX;
+         current_circle.y = e.clientY;
+     };
+     window.onmouseout = function () {
+         current_circle.x = null;
+         current_circle.y = null;
+     };
   
 
 <script type="text/javascript">
@@ -686,6 +814,8 @@
 
   
 
+
+  
 
 
 
@@ -714,6 +844,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -760,8 +893,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://s40523119.github.io/2017/06/30/20170630/';
-          this.page.identifier = '2017/06/30/20170630/';
+          this.page.url = 'https://s40523119.github.io/20170630.html';
+          this.page.identifier = '20170630.html';
           this.page.title = 'Django專案(1)-建立';
         };
         var d = document, s = d.createElement('script');
@@ -813,6 +946,11 @@
 
   
 
+  
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
   
 
 </body>
