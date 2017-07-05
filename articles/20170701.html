@@ -102,7 +102,7 @@
 <meta property="og:description" content="什麼是MVC?MVC模式就是架構模式的一種，MVC模式的目的是實作一種動態的程式設計，使後續對程式的修改和擴充功能簡化，並且使程式某一部分的重複利用成為可能。除此之外，此模式通過對複雜度的簡化，使程式結構更加直覺。 軟體系統通過對自身基本部分分離的同時也賦予了各個基本部分應有的功能。專業人員可以通過自身的專長分組：  控制器 Controller - 負責轉發請求，對請求進行處理。 視圖 Vie">
 <meta property="og:image" content="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg">
 <meta property="og:image" content="http://i.imgur.com/pUqFizt.png">
-<meta property="og:updated_time" content="2017-07-01T16:27:54.666Z">
+<meta property="og:updated_time" content="2017-07-05T08:29:04.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django專案(2)-視圖與URL">
 <meta name="twitter:description" content="什麼是MVC?MVC模式就是架構模式的一種，MVC模式的目的是實作一種動態的程式設計，使後續對程式的修改和擴充功能簡化，並且使程式某一部分的重複利用成為可能。除此之外，此模式通過對複雜度的簡化，使程式結構更加直覺。 軟體系統通過對自身基本部分分離的同時也賦予了各個基本部分應有的功能。專業人員可以通過自身的專長分組：  控制器 Controller - 負責轉發請求，對請求進行處理。 視圖 Vie">
@@ -426,9 +426,10 @@
 <h2 id="設定-urls-py"><a href="#設定-urls-py" class="headerlink" title="設定 urls.py"></a>設定 <code>urls.py</code></h2><p>打開mysite/mysite/urls.py，你會看見預設的基本設定。(前段註解略過)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</div><div class="line">]</div></pre></td></tr></table></figure></p>
 <p>這個設定檔主要是利用<code>urlpatterns</code>這個變數來進行pattern跟action的對應，就好比說，pattern:外面這下著雨、action:帶傘，意即我告訴網站:外面下著雨，那麼它就會執行一個動作:帶傘。</p>
 <p>現在我想要實現當我網址輸入<code>localhost:8000/here</code>，網站就要秀出 <strong>媽!我在這裡!</strong>。</p>
-<p>在程式碼新增以下內容<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> mysite.views <span class="keyword">import</span> here  <span class="comment">#從views.py匯入here這個function</span></div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^here/$'</span>, here), <span class="comment">#加入此行</span></div><div class="line">]</div></pre></td></tr></table></figure><br>意思就是當網址是<code>localhost:8000/here</code>，就會幫我執行<code>views.py</code>下的<code>here</code>。</p>
+<p>在程式碼新增以下內容<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> mysite.views <span class="keyword">import</span> here  <span class="comment">#從views.py匯入here這個function</span></div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^here/$'</span>, here), <span class="comment">#加入此行</span></div><div class="line">]</div></pre></td></tr></table></figure><br>^:判定起始點 $:判定末點<br>意思就是當網址是<code>localhost:8000/here</code>，就會幫我執行<code>views.py</code>下的<code>here</code>。</p>
 <h2 id="撰寫-views-py函式"><a href="#撰寫-views-py函式" class="headerlink" title="撰寫 views.py函式"></a>撰寫 <code>views.py</code>函式</h2><p>在<code>mysite/mysite/</code>下新增一個<code>views.py</code>，並新增程式碼並儲存。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">here</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">'媽!我在這裡!'</span>)</div></pre></td></tr></table></figure></p>
-<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>前往 <code>localhost:8000/here</code>是否出現了呢?</p>
+<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>先啟動伺服器<code>python manage.py runserver</code></p>
+<p>前往 <code>localhost:8000/here</code>是否出現了呢?</p>
 <p><img src="http://i.imgur.com/pUqFizt.png" alt="Imgur"></p>
 
       
@@ -485,6 +486,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/articles/20170705.html" rel="prev" title="Django專案(3)-網址計算機">
+                Django專案(3)-網址計算機 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -563,7 +568,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
@@ -718,7 +723,7 @@ var Circle = function () {
             //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
             ctx.arc(this.x, this.y, this.r, 0, 360);
             ctx.closePath();
-            ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+            ctx.fillStyle = 'rgb(172, 209, 233, 0.3)';
             ctx.fill();
         }
     }, {
@@ -732,7 +737,7 @@ var Circle = function () {
                 ctx.moveTo(this.x, this.y); //起始点
                 ctx.lineTo(_circle.x, _circle.y); //终点
                 ctx.closePath();
-                ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+                ctx.strokeStyle = 'rgb(172, 209, 233, 0.3)';
                 ctx.stroke();
             }
         }
@@ -762,7 +767,7 @@ var currentCirle = function (_Circle) {
             ctx.arc(this.x, this.y, this.r, 0, 360);
             ctx.closePath();
             //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-            ctx.fillStyle = 'rgba(255, 77, 54, 0.6)';
+            ctx.fillStyle = 'rgba(255, 77, 54, 0.3)';
             ctx.fill();
         }
     }]);
