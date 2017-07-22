@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,Django,web-framework," />
+  <meta name="keywords" content="吉他,指彈吉他,fingerstyle," />
 
 
 
@@ -93,19 +93,19 @@
 
 
 
-<meta name="description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
-<meta name="keywords" content="python,Django,web-framework">
+<meta name="description" content="前幾天WAGF指彈大賽剛結束，在臉書上跟朋友談到一些音樂的事情後，腦中又有了新的想法想要重新實現過去某些東西，我很喜歡彈吉他，也喜歡彈所謂的指彈＂fingerstyle＂，過去台灣吉他圈的指彈前輩們，留下很多漂亮的成績，像是到處巡迴的 陳彥宏老師、為台灣音樂深耕多年的 董運昌老師、還有07年創立 奇想樂器 FantasyMusic 有著吉他軍火商之稱的 紀明程 老師，當然還有其他很優秀的前輩實在">
+<meta name="keywords" content="吉他,指彈吉他,fingerstyle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django專案(1)-建立">
-<meta property="og:url" content="https://s40523119.github.io/articles/20170630.html">
+<meta property="og:title" content="推廣台灣指彈吉他">
+<meta property="og:url" content="https://s40523119.github.io/articles/20170718.html">
 <meta property="og:site_name" content="林建安 Lin, Jian-an">
-<meta property="og:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
-<meta property="og:image" content="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg">
-<meta property="og:updated_time" content="2017-07-01T16:27:54.676Z">
+<meta property="og:description" content="前幾天WAGF指彈大賽剛結束，在臉書上跟朋友談到一些音樂的事情後，腦中又有了新的想法想要重新實現過去某些東西，我很喜歡彈吉他，也喜歡彈所謂的指彈＂fingerstyle＂，過去台灣吉他圈的指彈前輩們，留下很多漂亮的成績，像是到處巡迴的 陳彥宏老師、為台灣音樂深耕多年的 董運昌老師、還有07年創立 奇想樂器 FantasyMusic 有著吉他軍火商之稱的 紀明程 老師，當然還有其他很優秀的前輩實在">
+<meta property="og:image" content="http://imgur.com/JwHjkc5.jpg">
+<meta property="og:updated_time" content="2017-07-22T16:49:40.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django專案(1)-建立">
-<meta name="twitter:description" content="前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉! 建立虛擬環境使">
-<meta name="twitter:image" content="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg">
+<meta name="twitter:title" content="推廣台灣指彈吉他">
+<meta name="twitter:description" content="前幾天WAGF指彈大賽剛結束，在臉書上跟朋友談到一些音樂的事情後，腦中又有了新的想法想要重新實現過去某些東西，我很喜歡彈吉他，也喜歡彈所謂的指彈＂fingerstyle＂，過去台灣吉他圈的指彈前輩們，留下很多漂亮的成績，像是到處巡迴的 陳彥宏老師、為台灣音樂深耕多年的 董運昌老師、還有07年創立 奇想樂器 FantasyMusic 有著吉他軍火商之稱的 紀明程 老師，當然還有其他很優秀的前輩實在">
+<meta name="twitter:image" content="http://imgur.com/JwHjkc5.jpg">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://s40523119.github.io/articles/20170630.html"/>
+  <link rel="canonical" href="https://s40523119.github.io/articles/20170718.html"/>
 
 
 
 
 
-  <title>Django專案(1)-建立 | 林建安 Lin, Jian-an</title>
+  <title>推廣台灣指彈吉他 | 林建安 Lin, Jian-an</title>
   
 
 
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/articles/20170630.html">
+    <link itemprop="mainEntityOfPage" href="https://s40523119.github.io/articles/20170718.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林建安">
@@ -314,7 +314,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Django專案(1)-建立</h2>
+          <h2 class="post-title" itemprop="name headline">推廣台灣指彈吉他</h2>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-06-30T21:44:09+08:00">
-                2017-06-30
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-07-18T00:18:53+08:00">
+                2017-07-18
               </time>
             
 
@@ -349,19 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/source/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/source/categories/Python/Django教學/" itemprop="url" rel="index">
-                    <span itemprop="name">Django教學</span>
+                  <a href="/source/categories/心情札記/" itemprop="url" rel="index">
+                    <span itemprop="name">心情札記</span>
                   </a>
                 </span>
 
@@ -378,9 +367,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/articles/20170630.html#comments" itemprop="discussionUrl">
+                <a href="/articles/20170718.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="articles/20170630.html" itemprop="commentCount"></span>
+                        data-disqus-identifier="articles/20170718.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,23 +394,12 @@
       
 
       
-        <p><img src="https://samueleresca.net/wp-content/uploads/2015/12/python-django-logo.jpg" alt="Django"></p>
-<p>前言:為了要建置系上學會的網站，決定用Django來架設，先用這兩個月的暑期來好好練習一下!!當初抉擇要使用Flask還是Django，想了想系學會網站的面向，慢慢組織起來也會是挺龐大的，雖然Flask輕量簡便，但是我好像需要很多功能，不想自己重新造輪，Django模組化的設計就很適合我阿!以下文章可能會有些錯誤的地方，這也是邊學邊做記錄下來的，如果有問題，麻煩留言告知我一下囉!</p>
-<h2 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a>建立虛擬環境</h2><p>使用虛擬環境來撰寫專案，好處實在多多，不用擔心套件安裝的煩惱，也能同時運用不同版本的Python來撰寫程式，好東西不好用嗎?</p>
-<a id="more"></a>
-<p>P.S.本電腦環境使用Ubuntu1604,Python3,pip3</p>
-<p>利用pip3安裝virtualenv<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pip3 install virtualenv</div></pre></td></tr></table></figure></p>
-<p>建立一個你的專案資料夾<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir my_project</div></pre></td></tr></table></figure></p>
-<p>進入你的資料夾並建立虛擬環境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd my_project</div><div class="line">$ virtualenv env</div></pre></td></tr></table></figure></p>
-<p>啟動虛擬環境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source env/bin/activate</div></pre></td></tr></table></figure></p>
-<p>前面出現 <strong>(env)</strong>，表示啟動成功。</p>
-<h2 id="安裝Django"><a href="#安裝Django" class="headerlink" title="安裝Django"></a>安裝Django</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pip3 install Django</div></pre></td></tr></table></figure>
-<h2 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h2><p>利用<code>django-admin.py startproject</code> 來建立專案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ django-admin.py startproject mysite</div></pre></td></tr></table></figure></p>
-<p>此時你的目錄下會多了<code>mysite</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mysite/</div><div class="line">├── manage.py</div><div class="line">└── mysite</div><div class="line">    ├── __init__.py</div><div class="line">    ├── settings.py</div><div class="line">    ├── urls.py</div><div class="line">    └── wsgi.py</div></pre></td></tr></table></figure></p>
-<h2 id="設定語言與時區"><a href="#設定語言與時區" class="headerlink" title="設定語言與時區"></a>設定語言與時區</h2><p>編輯<code>mysite/mysite/settings.py</code></p>
-<p>修改<code>LANGUAGE_CODE</code>、<code>TIME_ZONE</code>為以下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">LANGUAGE_CODE = <span class="string">'zh-Hant'</span></div><div class="line">TIME_ZONE = <span class="string">'Asia/Taipei'</span></div></pre></td></tr></table></figure></p>
-<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ python manage.py runserver</div></pre></td></tr></table></figure>
-<p>打開瀏覽器至 <code>localhost:8000</code>，出現成功訊息表示完成。</p>
+        <p><img src="http://imgur.com/JwHjkc5.jpg" alt="fingerstyle"></p>
+<p>前幾天WAGF指彈大賽剛結束，在臉書上跟朋友談到一些音樂的事情後，腦中又有了新的想法想要重新實現過去某些東西，我很喜歡彈吉他，也喜歡彈所謂的指彈＂fingerstyle＂，過去台灣吉他圈的指彈前輩們，留下很多漂亮的成績，像是到處巡迴的 陳彥宏老師、為台灣音樂深耕多年的 <a href="https://www.facebook.com/Donguitar/" target="_blank" rel="external">董運昌老師</a>、還有07年創立 <a href="https://www.facebook.com/FantasyMusicShop/" target="_blank" rel="external">奇想樂器 FantasyMusic</a> 有著吉他軍火商之稱的 <a href="https://www.facebook.com/guitar.chi" target="_blank" rel="external">紀明程</a> 老師，當然還有其他很優秀的前輩實在是不勝枚舉。後來董老師領軍新世代吉他手發行的《吉他烏托邦》演奏專輯，這也是我第一個購入的吉他專輯跟樂譜，也在發行的同一年，以吉他烏托邦之名舉辦了吉他大賽，可以說是正式開創了台灣指彈生力軍的里程碑，漸漸地 <a href="https://www.facebook.com/A.G.Utopia" target="_blank" rel="external">Guitar Utopia 吉他烏托邦</a> 變成了台灣指彈的殿堂，除了透過競賽交流音樂之外，也是一個對於自己在音樂上的努力付出的一項證明，經過一連串的吉他洗禮，當年小毛頭高中生的我，有了些想法想要實現。<br><a id="more"></a><br>所以兩年多前，創立一個粉絲專頁 <a href="https://www.facebook.com/fingerstyleTW/" target="_blank" rel="external">Fingerstyle 指彈吉他分享</a>，當初很單純地我只是想要分享指彈吉他，當了全台灣第一個以指彈吉他資訊整合的社群平台，因為我知道在學習的時候，尋找資源並不是那麼友善，那我就在想，我是不是能提供一個地方將網路上的資源好好的運用，供剛開始學習亦或是有需求的人，可以快速地找到或是能夠提出請求，由我去幫忙找一些東西。<br>因為我也是學生而已，當時沒有什麼管理社群媒體、或是類似經營電商的概念，所以也是憑自己當下的邏輯思維在經營，而且台灣苦命的學生，課業很重…就沒花太多時間在上面，甚至荒廢掉了！後來我也意識到一些著作權的問題，例如：重製、公開傳輸、合理使用範圍，使得我並沒有積極的在做這件事情，你們知道的麻，擋人財路是不好的！好比說將正版的樂譜公開這絕對是不合法！但像是由非原創者採譜分享出來或是原創作者已公開在網路上，不重製的前提下，進行分享，在比例限度內做個人非商業使用、非營利目的使用，都屬於台灣著作權法中的 <em>合理範圍</em>，這就是未來朝向的目標之一。</p>
+<p>前面提到的新想法呢？當我的腦袋邏輯思維提升後，重新整理這些東西後，以非營利推廣台灣指彈吉他的目的下，當然要把這個餅做大啊！成為一個不營利的B2C電商平台(不營利應該只能稱為社群啦)，可以找到願意奉獻心力在台灣音樂上的夥伴們的話，整體運作順利，我甚至考慮去申請音樂產業類型的社團法人，可以申請國家文化局的預算補助，這種團體只能靠專戶募款或是補助進行生存，如果真的能做到這麼大的時候，就真的不簡單了。說到這邊，聽起來好像真的有點困難，有辦法嗎？我一個人絕對不行，一個團隊就會有希望，所以我一定會招兵買馬。</p>
+<p>對於管理、媒體數位行銷，這幾年我都有很多新的衝擊跟想法，這也會是一個自我嘗試的好機會，技術層面也想做些挑戰，小規模的商業架站，我想我現在能夠用時間將它生產出來，當然如果有夥伴一起進行這就更好了！具體的想法如下，改變原先的臉書專頁的社群取向，將原先的吉他譜分享轉變為主要推廣Fingerstyle跟分享吉他譜（必須在合法範圍），再來購買網域＂fingerstyle.tw＂價錢我稍微看了一下，並不會太貴，我可以自己負擔。架設一個平台，功能會有台灣指彈歷史介紹、人物介紹、專欄文章、網路文章(我絕對不會放農場文)以及一個媒合的活動專區，這部分會是推廣的最大主力。我覺得做為一個平台，服務的品質、專業度會是吸引、維持客戶最主要的原因。例如歷史人物介紹這個部分，勢必成立公關、媒體的組織，想盡辦法去做採訪、研究、撰寫文稿。活動部分可以是獨立主辦、或是以組織人氣來為其他人(吉他手或是樂器行)做協辦，這也是目前一個腦內簡單的組織。</p>
+<p>所以呢，一個簡單理念分享的背後卻是複雜的團隊合作，大家都說台灣的大學生盡會做一些鳥事，新聞很多，這時候是該為台灣青年洗白一下。有空也得請教一下，我的志工團的理事長，對於這種非營利目的的團體，經營與管理上的一些眉角，或許到時候又會有新的想法被激發出來。</p>
+<p>這個專案我會好好地整理一番，然後發表到一個比較大宗的吉他社團，徵求志同道合的夥伴一同參與，這會是 <strong>No Pay No bonus No Pressure,But ONLY MUSIC FOR HAPPINESS」、「沒有報酬、沒有獎金、沒有壓力，只有音樂才能快樂的工作」</strong>，不知道我的話語是否能感動人心呢？還是又得打退堂鼓了，試試看囉！</p>
 
       
     </div>
@@ -451,11 +429,11 @@
       
         <div class="post-tags">
           
-            <a href="/source/tags/python/" rel="tag"># python</a>
+            <a href="/source/tags/吉他/" rel="tag"># 吉他</a>
           
-            <a href="/source/tags/Django/" rel="tag"># Django</a>
+            <a href="/source/tags/指彈吉他/" rel="tag"># 指彈吉他</a>
           
-            <a href="/source/tags/web-framework/" rel="tag"># web-framework</a>
+            <a href="/source/tags/fingerstyle/" rel="tag"># fingerstyle</a>
           
         </div>
       
@@ -468,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/articles/20170624.html" rel="next" title="搬離大學宿舍">
-                <i class="fa fa-chevron-left"></i> 搬離大學宿舍
+              <a href="/articles/20170705.html" rel="next" title="Django專案(3)-網址計算機">
+                <i class="fa fa-chevron-left"></i> Django專案(3)-網址計算機
               </a>
             
           </div>
@@ -477,10 +455,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/articles/20170701.html" rel="prev" title="Django專案(2)-視圖與URL">
-                Django專案(2)-視圖與URL <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,17 +508,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -626,22 +591,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立虛擬環境"><span class="nav-number">1.</span> <span class="nav-text">建立虛擬環境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝Django"><span class="nav-number">2.</span> <span class="nav-text">安裝Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立專案"><span class="nav-number">3.</span> <span class="nav-text">建立專案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#設定語言與時區"><span class="nav-number">4.</span> <span class="nav-text">設定語言與時區</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#測試"><span class="nav-number">5.</span> <span class="nav-text">測試</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -792,9 +741,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://s40523119.github.io/articles/20170630.html';
-          this.page.identifier = 'articles/20170630.html';
-          this.page.title = 'Django專案(1)-建立';
+          this.page.url = 'https://s40523119.github.io/articles/20170718.html';
+          this.page.identifier = 'articles/20170718.html';
+          this.page.title = '推廣台灣指彈吉他';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://s40523119.disqus.com/embed.js';
